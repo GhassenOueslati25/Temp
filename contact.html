@@ -19,6 +19,17 @@ Author URL: http://w3layouts.com
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
   <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
 </head>
+<script>
+  window.addEventListener('DOMContentLoaded', function() {
+    var button = document.getElementById('changex');
+    if(button){
+      button.click();
+    }
+  });
+   function changeBackground(imgurl){
+      document.documentElement.style.setProperty('--background-url', `url('../images/${imgurl}')`);
+    }
+  </script>
 </head>
 
 <body>
@@ -157,6 +168,8 @@ Author URL: http://w3layouts.com
   <!--/inner-page-->
 
   <div class="inner-banner">
+    <button id="changex"  onclick="changeBackground('farchive.png')" ></button>
+
   </div>
   <section class="w3l-breadcrumb">
     <div class="container">
